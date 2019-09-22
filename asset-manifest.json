@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/kodeinlunch/static/css/main.05a0ee05.chunk.css",
-    "main.js": "/kodeinlunch/static/js/main.a8d69611.chunk.js",
-    "main.js.map": "/kodeinlunch/static/js/main.a8d69611.chunk.js.map",
-    "runtime-main.js": "/kodeinlunch/static/js/runtime-main.ec4d03f7.js",
-    "runtime-main.js.map": "/kodeinlunch/static/js/runtime-main.ec4d03f7.js.map",
-    "static/css/2.6e33773d.chunk.css": "/kodeinlunch/static/css/2.6e33773d.chunk.css",
-    "static/js/2.3b240ab8.chunk.js": "/kodeinlunch/static/js/2.3b240ab8.chunk.js",
-    "static/js/2.3b240ab8.chunk.js.map": "/kodeinlunch/static/js/2.3b240ab8.chunk.js.map",
-    "index.html": "/kodeinlunch/index.html",
-    "precache-manifest.39f8dbd4f8961241e3ec4f9cee327e4a.js": "/kodeinlunch/precache-manifest.39f8dbd4f8961241e3ec4f9cee327e4a.js",
-    "service-worker.js": "/kodeinlunch/service-worker.js",
-    "static/css/2.6e33773d.chunk.css.map": "/kodeinlunch/static/css/2.6e33773d.chunk.css.map",
-    "static/css/main.05a0ee05.chunk.css.map": "/kodeinlunch/static/css/main.05a0ee05.chunk.css.map"
+    "main.css": "/lunchtime/static/css/main.05a0ee05.chunk.css",
+    "main.js": "/lunchtime/static/js/main.0ec0a642.chunk.js",
+    "main.js.map": "/lunchtime/static/js/main.0ec0a642.chunk.js.map",
+    "runtime-main.js": "/lunchtime/static/js/runtime-main.213a0007.js",
+    "runtime-main.js.map": "/lunchtime/static/js/runtime-main.213a0007.js.map",
+    "static/css/2.6e33773d.chunk.css": "/lunchtime/static/css/2.6e33773d.chunk.css",
+    "static/js/2.2979d1e8.chunk.js": "/lunchtime/static/js/2.2979d1e8.chunk.js",
+    "static/js/2.2979d1e8.chunk.js.map": "/lunchtime/static/js/2.2979d1e8.chunk.js.map",
+    "index.html": "/lunchtime/index.html",
+    "precache-manifest.ac33d26d4acde462c9499fa6e378b097.js": "/lunchtime/precache-manifest.ac33d26d4acde462c9499fa6e378b097.js",
+    "service-worker.js": "/lunchtime/service-worker.js",
+    "static/css/2.6e33773d.chunk.css.map": "/lunchtime/static/css/2.6e33773d.chunk.css.map",
+    "static/css/main.05a0ee05.chunk.css.map": "/lunchtime/static/css/main.05a0ee05.chunk.css.map"
   }
 }
