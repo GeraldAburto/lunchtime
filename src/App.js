@@ -1,24 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Route, Switch } from 'react-router-dom';
+
+import 'materialize-css/dist/css/materialize.min.css';
+import 'react-big-calendar/lib/css/react-big-calendar.css';
 import './App.css';
+
+import TodayPage from './pages/today/today.page';
+import Navbar from './components/navbar/navbar.component';
+import CalendarPage from './pages/calendar/calendar.page';
+import LoginPage from './pages/login/login.page';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Navbar />
+      <div className='container'>
+        <Switch>
+          <Route exact path='/' component={TodayPage} />
+          <Route exact path='/today' component={TodayPage} />
+          <Route exact path='/calendar' component={CalendarPage} />
+          <Route exact path='/login' component={LoginPage} />
+        </Switch>
+      </div>
     </div>
   );
 }

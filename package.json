@@ -3,8 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "materialize-css": "^1.0.0-rc.2",
+    "moment": "^2.24.0",
     "react": "^16.9.0",
+    "react-big-calendar": "^0.22.1",
     "react-dom": "^16.9.0",
+    "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.2"
   },
   "scripts": {
