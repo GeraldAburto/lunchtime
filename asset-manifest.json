@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/kodeinlunch/static/css/main.05a0ee05.chunk.css",
+    "main.js": "/kodeinlunch/static/js/main.d7e1d133.chunk.js",
+    "main.js.map": "/kodeinlunch/static/js/main.d7e1d133.chunk.js.map",
+    "runtime-main.js": "/kodeinlunch/static/js/runtime-main.ec4d03f7.js",
+    "runtime-main.js.map": "/kodeinlunch/static/js/runtime-main.ec4d03f7.js.map",
+    "static/css/2.6e33773d.chunk.css": "/kodeinlunch/static/css/2.6e33773d.chunk.css",
+    "static/js/2.d78be11e.chunk.js": "/kodeinlunch/static/js/2.d78be11e.chunk.js",
+    "static/js/2.d78be11e.chunk.js.map": "/kodeinlunch/static/js/2.d78be11e.chunk.js.map",
+    "index.html": "/kodeinlunch/index.html",
+    "precache-manifest.f7ef23a5e00569c85e7e9b681c5a0dc4.js": "/kodeinlunch/precache-manifest.f7ef23a5e00569c85e7e9b681c5a0dc4.js",
+    "service-worker.js": "/kodeinlunch/service-worker.js",
+    "static/css/2.6e33773d.chunk.css.map": "/kodeinlunch/static/css/2.6e33773d.chunk.css.map",
+    "static/css/main.05a0ee05.chunk.css.map": "/kodeinlunch/static/css/main.05a0ee05.chunk.css.map"
+  }
+}
