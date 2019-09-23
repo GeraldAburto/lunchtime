@@ -16,7 +16,7 @@ class Calendar extends React.Component {
 
     componentDidMount() {
         if(!this.props.currentUser)
-            M.toast({ html: '<span>Please <a href="/login" className="btn-flat toast-action">Sign in</a> to see your history</span>' })
+            M.toast({ html: '<span>Please <a href="#/login" className="btn-flat toast-action">Sign in</a> to see your history</span>' })
     }
 
     render() {
