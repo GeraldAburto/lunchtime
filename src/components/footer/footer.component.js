@@ -1,24 +1,25 @@
 import React from 'react'
+import './footer.styles.css';
 
 const Footer = () => {
     return (
         <footer className='page-footer'>
-            <div className="container">
-                <div className="row">
-                    <div className="col l6 s12">
-                        <h5 class="white-text">Lunch Time</h5>
-                        <p class="grey-text text-lighten-4">Developed with  by Gerald Aburto.</p>
+            <div className='container'>
+                <div className='row'>
+                    <div className='col l6 s12'>
+                        <h5 className='white-text'>Lunch Time</h5>
+                        <p className='grey-text text-lighten-4'>Developed with <span role='img' aria-label='heart'> ❤️</span> by Gerald Aburto.</p>
                     </div>
-                    <div class="col l4 offset-l2 s12">
-                        <h5 class="white-text">Find me on Github</h5>
+                    <div className='col l4 offset-l2 s12'>
+                        <h5 className='white-text'>Find me on Github</h5>
                         <ul>
-                            <li><a class="grey-text text-lighten-3" href="#!">Github</a></li>
+                            <li><a className='grey-text text-lighten-3 gh-link' href='https://github.com/GeraldAburto/lunchtime' target='_blank' rel="noopener noreferrer"><span className='gh-ico'></span>  Lunch Time repo</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="footer-copyright">
-                <div class="container">© 2019 All right reserved.</div>
+            <div className='footer-copyright'>
+                <div className='container'>© 2019 All right reserved.</div>
             </div>
         </footer>
     );
