@@ -42,6 +42,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
             await userRef.set({
                 displayName,
                 email,
+                avatar: `https://dummyimage.com/squarepopup/${Math.floor(Math.random()*16777215).toString(16)}/ffffff&text=${displayName[0].toUpperCase()}`,
                 createdAt,
                 ...additionalData
             });
