@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './sign-up.styles.css';
 
 class SignUp extends React.Component {
     constructor() {
@@ -29,8 +30,8 @@ class SignUp extends React.Component {
                             <label htmlFor="email">Email</label>
                         </div>
                         <div className="input-field col s12">
-                            <input type="password" id="email" name='password' onChange={this.handleOnChange} className="validate" required />
-                            <label htmlFor="email">Password</label>
+                            <input type="password" id="password" name='password' onChange={this.handleOnChange} className="validate" required />
+                            <label htmlFor="password">Password</label>
                         </div>
                         <div className='input-field col s12'>
                             <button className="btn waves-effect waves-light" type="submit" name="action">Sign up
@@ -38,14 +39,14 @@ class SignUp extends React.Component {
                             </button>
                         </div>
                         <div className="input-field col s12">
-                            <p>or Connect with Social Media.</p>
+                            <p>or</p>
                             <br />
-                            <button className="waves-effect waves-light btn" type='button'>Enter with Google</button>
+                            <button className="waves-effect waves-light btn" type='button'>Sign Up with Google</button>
                         </div>
                     </div>
                 </form>
                 <div className="col s12">
-                    <Link to='/login'>already have an account? sign in</Link>
+                    <Link to='/login'>Already have an account? sign in</Link>
                 </div>
             </div>
         );

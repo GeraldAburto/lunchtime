@@ -27,7 +27,7 @@ class Calendar extends React.Component {
                 defaultDate={new Date()}
                 defaultView='month'
                 events={dates}
-                style={{ height: '70vh'}}
+                style={{ height: '60vh'}}
             />
         );
     }
