@@ -16,15 +16,15 @@ class TodayPage extends React.Component {
     }
 
     handleOnAddMe = (food) => {
-
+        
         if(!this.props.currentUser)
             return M.toast({ html: '<span>Please <a href="#/login" className="btn-flat toast-action">Sign in</a> to select your food</span>' });
 
         let { commensals } = this.state,
-            { name, avatar } = this.props.currentUser;
+            { displayName, avatar } = this.props.currentUser;
             
         commensals.push({
-            name,
+            name: displayName,
             avatar,
             food
         });

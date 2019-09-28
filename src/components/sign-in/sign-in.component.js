@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { signInWithGoogle } from '../../firebase/firebase.utils';
 import './sign-in.styles.css';
 
 class SignIn extends React.Component {
@@ -42,7 +43,7 @@ class SignIn extends React.Component {
                         <div className="input-field col s12">
                             <p>or Connect with Social Media.</p>
                             <br/>
-                            <button className="waves-effect waves-light btn" type='button'>Sign in with Google</button>
+                            <button className="waves-effect waves-light btn" type='button' onClick={signInWithGoogle}>Sign in with Google</button>
                         </div>
                     </div>
                 </form>

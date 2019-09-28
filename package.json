@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://geraldaburto.github.io/lunchtime",
   "dependencies": {
+    "firebase": "^7.0.0",
     "materialize-css": "^1.0.0-rc.2",
     "moment": "^2.24.0",
     "react": "^16.9.0",

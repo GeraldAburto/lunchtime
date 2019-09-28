@@ -19,7 +19,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className='footer-copyright'>
-                <div className='container'>© 2019 all rights reserved - V.0.1.0</div>
+                <div className='container'>© 2019 all rights reserved - v0.1.0</div>
             </div>
         </footer>
     );

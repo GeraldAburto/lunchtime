@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
+import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 
 import 'materialize-css/dist/css/materialize.min.css';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
@@ -12,24 +13,60 @@ import LoginPage from './pages/login/login.page';
 import Footer from './components/footer/footer.component';
 import RegisterPage from './pages/register/register.page';
 
-function App() {
-  return (
-    <div className='app'>
-      <Navbar />
-      <main>
-        <div className="container">
-          <Switch>
-            <Route exact path='/' component={TodayPage} />
-            <Route exact path='/today' component={TodayPage} />
-            <Route exact path='/calendar' component={CalendarPage} />
-            <Route exact path='/login' component={LoginPage} />
-            <Route exact path='/register' component={RegisterPage} />
-          </Switch>
-        </div>
-      </main>
-      <Footer />
-    </div>
-  );
+class App extends React.Component {
+  unsubcribeFromAuth = null;
+  constructor() {
+    super();
+
+    this.state = {
+      currentUser: undefined
+    };
+
+  }
+
+  componentDidMount() {
+    this.unsubcribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+      if (userAuth) {
+        const userRef = await createUserProfileDocument(userAuth);
+        userRef.onSnapshot(snapShot => {
+          this.setState({
+            currentUser: {
+              id: snapShot.id,
+              ...snapShot.data()
+            }
+          });
+        })
+      } else {
+        this.setState({ currentUser: userAuth });
+      }
+    });
+  }
+
+  componentWillUnmount() {
+    this.unsubscribeFromAuth();
+  }
+
+  render() {
+    const { currentUser } = this.state;
+    return (
+      <div className='app'>
+        <Navbar currentUser={currentUser} />
+        <main>
+          <div className="container">
+            <Switch>
+              <Route exact path='/' component={() => <TodayPage currentUser={currentUser} />} />
+              <Route exact path='/today' component={() => <TodayPage currentUser={currentUser} />} />
+              <Route exact path='/calendar' component={CalendarPage} />
+              <Route exact path='/login' component={LoginPage} />
+              <Route exact path='/register' component={RegisterPage} />
+            </Switch>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
 }
 
 export default App;
