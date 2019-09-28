@@ -10,6 +10,7 @@ import Navbar from './components/navbar/navbar.component';
 import CalendarPage from './pages/calendar/calendar.page';
 import LoginPage from './pages/login/login.page';
 import Footer from './components/footer/footer.component';
+import RegisterPage from './pages/register/register.page';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route exact path='/today' component={TodayPage} />
             <Route exact path='/calendar' component={CalendarPage} />
             <Route exact path='/login' component={LoginPage} />
+            <Route exact path='/register' component={RegisterPage} />
           </Switch>
         </div>
       </main>

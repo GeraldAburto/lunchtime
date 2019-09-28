@@ -11,11 +11,12 @@ const Navbar = () => {
                         <li><Link to='/today'>Today</Link></li>
                         <li><Link to='/calendar'>Calendar</Link></li>
                         <li><Link to='/login'>Sing in</Link></li>
+                        <li><Link to='/register'>Sing up</Link></li>
                     </ul>
                 </div>
             </nav>
         </header>
     );
-}
+};
 
 export default Navbar;
