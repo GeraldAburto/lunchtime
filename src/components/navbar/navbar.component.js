@@ -1,13 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import M from 'materialize-css/dist/js/materialize';
-import CurrentUser from '../current-user/current-user.component';
+import { auth } from '../../firebase/firebase.utils';
 
 class Navbar extends React.Component {
 
+    componentDidMount() {
+
+        console.log('componentDidMount')
+    }
+
     componentDidUpdate() {
+        console.log('componentDidUpdate');
         let elems = document.querySelectorAll('.dropdown-trigger');
-        M.Dropdown.init(elems, { coverTrigger: false });
+        if (elems && elems.length > 0) {
+            M.Dropdown.init(elems, { coverTrigger: false, autoTrigger: false });
+        }
     }
 
     render() {
@@ -22,7 +30,8 @@ class Navbar extends React.Component {
                             <li><Link to='/calendar'>Calendar</Link></li>
                             {
                                 currentUser ?
-                                    <li><a className='dropdown-trigger' data-target='currentuserdropdown' href='#/'>{currentUser.displayName} <i className="material-icons right">arrow_drop_down</i></a></li> :
+                                    <li><a className='dropdown-trigger' data-target='currentuserdropdown' href='#/'>{currentUser.displayName} <i className="material-icons right">arrow_drop_down</i></a></li>
+                                    :
                                     (
                                         [
                                             <li key={0}><Link to='/login'>Sing in</Link></li>,
@@ -33,7 +42,9 @@ class Navbar extends React.Component {
                         </ul>
                     </div>
                 </nav>
-                <CurrentUser />
+                <ul id="currentuserdropdown" className="dropdown-content">
+                    <li><a href='#/' onClick={() => auth.signOut()}> Sign Out </a></li>
+                </ul>
             </header>
         );
     }

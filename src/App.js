@@ -14,18 +14,19 @@ import Footer from './components/footer/footer.component';
 import RegisterPage from './pages/register/register.page';
 
 class App extends React.Component {
-  unsubcribeFromAuth = null;
+  unsubscribeFromAuth  = null;
   constructor() {
     super();
 
     this.state = {
-      currentUser: undefined
+      currentUser: undefined,
+      version: 'v0.1.2'
     };
 
   }
 
   componentDidMount() {
-    this.unsubcribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+    this.unsubscribeFromAuth  = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth);
         userRef.onSnapshot(snapShot => {
@@ -47,7 +48,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { currentUser } = this.state;
+    const { currentUser, version } = this.state;
     return (
       <div className='app'>
         <Navbar currentUser={currentUser} />
@@ -62,7 +63,7 @@ class App extends React.Component {
             </Switch>
           </div>
         </main>
-        <Footer />
+        <Footer version={version} />
       </div>
     );
   }

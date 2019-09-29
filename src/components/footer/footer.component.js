@@ -1,7 +1,7 @@
 import React from 'react'
 import './footer.styles.css';
 
-const Footer = () => {
+const Footer = ({ version }) => {
     return (
         <footer className='page-footer'>
             <div className='container'>
@@ -19,7 +19,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className='footer-copyright'>
-                <div className='container'>© 2019 all rights reserved - v0.1.0</div>
+                <div className='container'>© 2019 all rights reserved - {version}</div>
             </div>
         </footer>
     );
