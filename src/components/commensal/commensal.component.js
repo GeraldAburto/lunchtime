@@ -8,7 +8,7 @@ const Commensal = ({ id, avatar, name, food, handleOnRemove }) => {
             <p>
                 {food}
             </p>
-            <a href='#!' onClick={handleOnRemove.bind(this, id)} className="secondary-content"><i className="material-icons">close</i></a>
+            <a href='#/' onClick={handleOnRemove.bind(this, id)} className="secondary-content"><i className="material-icons">close</i></a>
         </li>
     );
 };

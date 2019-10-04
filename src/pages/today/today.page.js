@@ -16,13 +16,13 @@ class TodayPage extends React.Component {
     }
 
     handleOnAddMe = (food) => {
-        
-        if(!this.props.currentUser)
+
+        if (!this.props.currentUser)
             return M.toast({ html: '<span>Please <a href="#/login" className="btn-flat toast-action">Sign in</a> to select your food</span>' });
 
         let { commensals } = this.state,
             { displayName, avatar } = this.props.currentUser;
-            
+
         commensals.push({
             name: displayName,
             avatar,
@@ -42,6 +42,7 @@ class TodayPage extends React.Component {
 
     render() {
         let { menu, commensals } = this.state;
+        let { currentUser } = this.props;
         return (
             <div className='row'>
                 <div className="col s4">
@@ -53,7 +54,10 @@ class TodayPage extends React.Component {
                             <Commensals commensals={commensals} handleOnRemove={this.handleOnRemove} />
                         </div>
                         <div className="col s12">
-                            {commensals.find(commensal => commensal.name === 'Gerald Aburto') ? null : <AddMe menu={menu} onAddMe={this.handleOnAddMe} />}
+                            {
+                                commensals.find(commensal => commensal.name === currentUser.displayName) ?
+                                    null :
+                                    <AddMe menu={menu} onAddMe={this.handleOnAddMe} />}
                         </div>
                     </div>
                 </div>

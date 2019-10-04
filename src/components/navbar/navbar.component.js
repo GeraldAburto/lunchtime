@@ -6,16 +6,17 @@ import { auth } from '../../firebase/firebase.utils';
 class Navbar extends React.Component {
 
     componentDidMount() {
-
-        console.log('componentDidMount')
-    }
-
-    componentDidUpdate() {
-        console.log('componentDidUpdate');
-        let elems = document.querySelectorAll('.dropdown-trigger');
-        if (elems && elems.length > 0) {
-            M.Dropdown.init(elems, { coverTrigger: false, autoTrigger: false });
+        const waitUntilDropdownExists = (selector, callback) => {
+            let elem = document.getElementById(selector);
+            if (elem)
+                return callback(elem);
+            setTimeout(() => waitUntilDropdownExists(selector, callback), 2000);
         }
+
+        waitUntilDropdownExists('#currentUserDropdownTrigger', (elem) => {
+            console.log('found');
+            M.Dropdown.init(elem, { coverTrigger: false, autoTrigger: false });
+        });
     }
 
     render() {
@@ -30,7 +31,7 @@ class Navbar extends React.Component {
                             <li><Link to='/calendar'>Calendar</Link></li>
                             {
                                 currentUser ?
-                                    <li><a className='dropdown-trigger' data-target='currentuserdropdown' href='#/'>{currentUser.displayName} <i className="material-icons right">arrow_drop_down</i></a></li>
+                                    <li><a className='dropdown-trigger' id='currentUserDropdownTrigger' data-target='currentuserdropdown' href='#/'>{currentUser.displayName} <i className="material-icons right">arrow_drop_down</i></a></li>
                                     :
                                     (
                                         [

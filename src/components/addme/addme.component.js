@@ -26,7 +26,6 @@ class AddMe extends React.Component {
 
     handleOnSubmit = (event) => {
         event.preventDefault();
-
         this.state.onAddMe(this.state.food);
     }
 
@@ -47,7 +46,17 @@ class AddMe extends React.Component {
                             </select>
                         </div>
                     </div>
-                    <div className="col s6">
+                    <div className='col s4'>
+                        <div className='input-field'>
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>Save me as recurrent</span>
+                                </label>
+                            </p>
+                        </div>
+                    </div>
+                    <div className="col s2">
                         <div className="input-field">
                             <button className="btn waves-effect waves-light" type="submit" name="action">Add me
                                 <i className="material-icons right">add</i>
